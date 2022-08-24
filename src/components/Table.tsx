@@ -1,39 +1,36 @@
 import React from "react";
 import { default as TableBoostrap } from "react-bootstrap/Table";
+import data from "../data";
 
 const Table = () => {
   return (
     <>
-      <h2>Table</h2>
-      <TableBoostrap striped bordered hover variant="dark">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Username</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td colSpan={2}>Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-      </TableBoostrap>
+      <div style={{ backgroundColor: "lightslategray" }}>
+        <h2 className="tableTitle">Table</h2>
+        <TableBoostrap striped bordered hover variant="dark">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nombre</th>
+              <th>Edad</th>
+              <th>Carrera</th>
+              <th>Hobbie</th>
+            </tr>
+          </thead>
+          <tbody>
+            {data &&
+              data.map((item, index) => (
+                <tr key={index}>
+                  <td>{index + 1}</td>
+                  <td>{item.name}</td>
+                  <td>{item.age}</td>
+                  <td>{item.career}</td>
+                  <td>{item.hobbie}</td>
+                </tr>
+              ))}
+          </tbody>
+        </TableBoostrap>
+      </div>
     </>
   );
 };
