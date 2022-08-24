@@ -10,3 +10,12 @@
 html {
   background-color: lightslategray;
 }
+
+.homeText {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background-color: lightslategray;
+  margin-top: 10px;
+}

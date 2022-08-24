@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <>
-      <div style={{ backgroundColor: "lightslategray" }}>
+      <div style={{ backgroundColor: "lightslategray", fontSize: "22px" }}>
         <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
           <Container>
             <Link to={"/"} style={{ textDecoration: "none" }}>
@@ -19,7 +19,7 @@ const Header = () => {
               <Nav className="me-auto">
                 <Nav.Link>
                   <Link to={"/table"} style={{ textDecoration: "none" }}>
-                    Table
+                    Tabla
                   </Link>
                 </Nav.Link>
                 <Nav.Link>

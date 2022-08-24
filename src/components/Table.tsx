@@ -6,7 +6,7 @@ const Table = () => {
   return (
     <>
       <div style={{ backgroundColor: "lightslategray" }}>
-        <h2 className="tableTitle">Table</h2>
+        <h2 className="tableTitle">Tabla</h2>
         <TableBoostrap striped bordered hover variant="dark">
           <thead>
             <tr>
